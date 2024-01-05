@@ -70,13 +70,13 @@ function intialize() {
 function update(){
     let correct = 0;
     for (let c = 0; c < width; c++){
-       let currentTile = document.getElementById(row.toString() + '-' + c.toString());
+       let currentTile = document.getElementById(row.toString() + "-" + c);
        let letter = currentTile.innerText;
        
        //Is it in the correct position?
        if(word[c] == letter) {
         currentTile.classList.add("correct");
-        correct +=1;
+        correct++;
        } //Is it in the word?
        else if(word.includes(letter)) {
         currentTile.classList.add("present");
